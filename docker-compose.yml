@@ -1,0 +1,10 @@
+version: "3"
+services:
+  converter:
+    container_name: converter
+    volumes:
+      - ./:/usr/src/app
+    command: python MAC_converter.py -i input.txt -o output.txt
+    stdin_open: true
+    build:
+      context: .
